@@ -11,8 +11,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
-    library: ['lib', '[name]'],
-    libraryTarget: "var",
+    library: ["FadeThrough", '[name]'],
+    libraryTarget: "commonjs2",
   },
   externals: {
     'react': 'react'

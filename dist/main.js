@@ -1,4 +1,4 @@
-var shared-components =
+var lib = lib || {}; lib["main"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
