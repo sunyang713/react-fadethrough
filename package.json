@@ -2,7 +2,7 @@
   "name": "react-fadethrough",
   "version": "1.0.6",
   "description": "A react module that fades through its children one by one.",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "gulp",
     "prepublish": "npm run build",
