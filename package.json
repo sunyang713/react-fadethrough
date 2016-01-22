@@ -1,6 +1,6 @@
 {
   "name": "react-fadethrough",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A react module that fades through its children one by one.",
   "main": "dist/main.js",
   "scripts": {
