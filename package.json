@@ -1,0 +1,27 @@
+{
+  "name": "react-fadethrough",
+  "version": "1.0.0",
+  "description": "A react module that fades through its children one by one.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunyang713/react-fadethrough.git"
+  },
+  "keywords": [
+    "react",
+    "fade",
+    "transition"
+  ],
+  "author": "Jonathan Sun <sunyang713@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunyang713/react-fadethrough/issues"
+  },
+  "homepage": "https://github.com/sunyang713/react-fadethrough#readme",
+  "dependencies": {
+    "react": "^0.14.6"
+  }
+}
