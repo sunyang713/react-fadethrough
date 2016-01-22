@@ -10,7 +10,12 @@ module.exports = {
   entry: path.join(srcPath, "index.js"),
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].js"
+    filename: "[name].js",
+    library: "shared-components",
+    libraryTarget: "var",
+  },
+  externals: {
+    'react': 'react'
   },
   module: {
     loaders: [
