@@ -4,8 +4,8 @@ import FadeThroughComponent from './FadeThroughComponent.jsx'
 export default class FadeThroughContainer extends React.Component {
 
   static propTypes = {
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
+    width: React.PropTypes.string.isRequired,
+    height: React.PropTypes.string.isRequired,
     delay: React.PropTypes.number.isRequired
   };
 
