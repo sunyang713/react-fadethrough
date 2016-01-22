@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
-    library: "shared-components",
+    library: ['lib', '[name]'],
     libraryTarget: "var",
   },
   externals: {
