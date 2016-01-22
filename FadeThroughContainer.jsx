@@ -1,5 +1,5 @@
 var React = require("react");
-var FadeThroughComponent = require("./FadeThroughComponent");
+var FadeThroughComponent = require("./FadeThroughComponent.jsx");
 
 
 var FadeThroughContainer = module.exports = React.createClass({

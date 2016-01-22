@@ -1,1 +1,1 @@
-module.exports = require('./FadeThroughContainer');
+module.exports = require('./FadeThroughContainer.jsx');
