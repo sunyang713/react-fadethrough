@@ -10,7 +10,7 @@ module.exports = {
   entry: path.join(srcPath, "index.js"),
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "index.js"
+    filename: "[name].js"
   },
   module: {
     loaders: [
