@@ -2,8 +2,10 @@
   "name": "react-fadethrough",
   "version": "1.0.6",
   "description": "A react module that fades through its children one by one.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "gulp",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +25,17 @@
   "homepage": "https://github.com/sunyang713/react-fadethrough#readme",
   "dependencies": {
     "react": "^0.14.6"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "webpack": "^1.12.11",
+    "webpack-stream": "^3.1.0"
   }
 }
