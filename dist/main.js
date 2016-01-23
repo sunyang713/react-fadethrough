@@ -1,4 +1,4 @@
-var lib = lib || {}; lib["main"] =
+module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -152,7 +152,7 @@ var lib = lib || {}; lib["main"] =
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = react;
+	module.exports = require("react");
 
 /***/ },
 /* 3 */
