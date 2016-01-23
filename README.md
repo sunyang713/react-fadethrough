@@ -17,12 +17,39 @@ This assumes that you’re using [npm](https://www.npmjs.com/) package manager w
 
 Wrap at least two elements of any kind inside an enclosing FadeThrough component. The FadeThrough will go through each component and apply and opacity transition. You'll need to apply width, height, and delay props to FadeThrough (the child components are rendered with absolute position).
 
+```js
+import FadeThrough from 'react-fadethrough'
+import myImage1 from 'some/path/to/myImage1.jpg'
+import myImage2 from 'some/path/to/myImage2.jpg'
+import myImage3 from 'some/path/to/myImage3.jpg'
+
+
+export default class MyFadeThroughTest {
+  render() {
+    return (
+      <div>
+        <FadeThrough
+          width={ '800px' }
+          height={ '600px' }
+          delay={ 5000 }
+        >
+          <div style={ { backgroundImage: 'url(' + myImage1 + ')' } } />
+          <div style={ { backgroundImage: 'url(' + myImage2 + ')' } } />
+          <div style={ { backgroundImage: 'url(' + myImage3 + ')' } } />
+        </FadeThrough>
+      </div>
+    )
+  }
+}
+
+```
+
+I made this so I could make a big fullscreen fading-image-cover for the homepage of a website, but it can (should be able to) handle anything inside of it.
+
 
 ```js
 import FadeThrough from 'react-fadethrough'
 import myImage from 'some/path/to/myImage.jpg'
-
-
 
 export default class MyFadeThroughTest {
   render() {
