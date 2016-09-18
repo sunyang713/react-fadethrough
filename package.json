@@ -1,10 +1,10 @@
 {
   "name": "react-fadethrough",
-  "version": "1.2.2",
+  "version": "1.3.4",
   "description": "A react module that fades through its children one by one.",
-  "main": "./dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "gulp",
+    "build": "babel src --out-dir dist",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,25 +19,25 @@
     "transition"
   ],
   "author": "Jonathan Sun <sunyang713@hotmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sunyang713/react-fadethrough/issues"
   },
   "homepage": "https://github.com/sunyang713/react-fadethrough#readme",
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ]
+  },
   "devDependencies": {
-    "babel": "^6.3.26",
+    "babel-cli": "^6.14.0",
     "babel-core": "^6.4.5",
-    "babel-loader": "^6.2.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-0": "^6.3.13",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.1",
-    "react": "^0.14.6",
-    "webpack": "^1.12.11",
-    "webpack-stream": "^3.1.0"
+    "babel-preset-latest": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "react": "^15.3.1"
   },
   "externals": {
-    "react": "^0.14.6"
+    "react": "^15.3.1"
   }
 }

@@ -1,17 +1,12 @@
-import React from 'react'
-import FadeThroughComponent from './FadeThroughComponent.jsx'
+import React, { Component } from 'react'
+import FadeThroughComponent from './FadeThroughComponent'
 
-export default class FadeThroughContainer extends React.Component {
+export default class FadeThroughContainer extends Component {
 
-  static propTypes = {
-    width: React.PropTypes.string.isRequired,
-    height: React.PropTypes.string.isRequired,
-    delay: React.PropTypes.number.isRequired
-  };
-
-  state = {
-    activeIndex: 0
-  };
+  constructor(props) {
+    super(props)
+    this.state = { activeIndex: 0 }
+  }
 
   componentDidMount() {
     this.interval = setInterval(
@@ -48,4 +43,10 @@ export default class FadeThroughContainer extends React.Component {
       </div>
     )
   }
+}
+
+FadeThroughContainer.propTypes = {
+  width: React.PropTypes.string.isRequired,
+  height: React.PropTypes.string.isRequired,
+  delay: React.PropTypes.number.isRequired
 }

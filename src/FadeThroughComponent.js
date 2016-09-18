@@ -1,11 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import FadeThroughChild from './FadeThroughChild'
 
-export default class FadeThroughComponent extends React.Component {
-
-  static defaultProps = {
-    activeIndex: 0
-  };
+export default class FadeThroughComponent extends Component {
 
   render() {
     const inactiveStyle = {
@@ -33,5 +29,8 @@ export default class FadeThroughComponent extends React.Component {
       </div>
     )
   }
+}
 
+FadeThroughComponent.defaultProps = {
+  activeIndex: 0
 }
