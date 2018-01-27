@@ -1,39 +1,68 @@
-"use strict";
-
-var path = require("path");
-var webpack = require("webpack");
-var srcPath = path.join(__dirname, "src");
-var inDevMode = process.env.NODE_ENV === "dev" || process.env.NODE_ENV === "development";
-
+const { resolve } = require('path')
+const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  entry: path.join(srcPath, "index.js"),
+
+  context: resolve('src'),
+
+  entry: {
+    'react-fadethrough': 'main',
+    'react-fadethrough.min': 'main'
+  },
+
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "[name].js",
-    library: ["FadeThrough", '[name]'],
-    libraryTarget: "commonjs2",
+    filename: '[name].js',
+    path: process.env.BUILD_PATH && resolve(process.env.BUILD_PATH),
+    // publicPath: process.env.PUBLIC_PATH,
+    library: 'ReactFadethrough',
+    libraryTarget: 'umd',
   },
-  externals: {
-    'react': 'react'
-  },
+
   module: {
-    loaders: [
-      // required for .js and .jsx
-      { test: /\.(js|jsx)$/, exclude: /(node_modules)/, loader: "babel-loader" },
-    ]
-  },
-  resolve: {
-    root: srcPath,
-    extensions: ["", ".js", ".jsx", ".styl"],
-    modulesDirectories: ["node_modules", "src"]
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify(inDevMode ? "development" : "production")
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      options: {
+        presets: [ 'env', 'react' ]
       },
+      exclude: /node_modules/
+    }]
+  },
+
+  resolve: {
+    modules: [ 'src', 'node_modules' ]
+  },
+
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom'
+    // 'react': {
+    //   root: 'React',
+    //   commonjs2: 'react',
+    //   commonjs: 'react',
+    //   amd: 'react'
+    // },
+    // 'react-dom': {
+    //   root: 'ReactDOM',
+    //   commonjs2: 'react-dom',
+    //   commonjs: 'react-dom',
+    //   amd: 'react-dom'
+    // }
+  },
+
+  plugins: [
+
+    // Inject environment variables.
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: null
+    }),
+
+    // Minimize
+    new UglifyJsPlugin({
+      include: /\.min\.js$/
     })
-  ],
-  debug: inDevMode
-};
+
+  ]
+
+}
