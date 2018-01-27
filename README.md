@@ -1,6 +1,6 @@
 # react-fadethrough
 A simple react module that will wrap and fade through it's children one by one.
-
+Example: http://sunyang713.github.io/react-fadethrough
 
 ### Installation
 
@@ -18,7 +18,12 @@ Wrap elements of any kind inside an enclosing Fadethrough component. The Fadethr
 - interval: a number representing the interval time in milliseconds between each element. Default: 3000.
 
 ```js
-<Fadethrough width={ '800px' } height={ '400px' } interval={ 3000 }>
+import Fadethrough from 'react-fadethrough'
+
+/* . . . */
+
+// in your render function
+<Fadethrough width={ '800px' } height={ '400px' } interval={ 5000 }>
   <img src={ one } width="800" height="400" />
   <img src={ two } width="800" height="400" />
   <img src={ three } width="800" height="400" />
@@ -27,6 +32,12 @@ Wrap elements of any kind inside an enclosing Fadethrough component. The Fadethr
 
 Fadethrough can handle any kind of child component.
 ```js
+import Fadethrough from 'react-fadethrough'
+
+
+/* . . . */
+
+// in your render function
 <FadeThrough>
   <h1>{ 'hello!' }</h1>
   <div style={ { backgroundImage: 'url(' + myImage + ')' } } />
