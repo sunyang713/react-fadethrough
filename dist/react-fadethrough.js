@@ -152,9 +152,8 @@ var Fadethrough = function (_Component) {
     value: function next() {
       var i = (this.state.activeIndex + 1) % this.props.children.length;
       this.setState(function (prevState) {
-        return { activeIndex: i || 0 };
+        return { activeIndex: i };
       });
-      console.log(i);
     }
   }, {
     key: 'render',
