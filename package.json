@@ -1,6 +1,6 @@
 {
   "name": "react-fadethrough",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A React utility component that iterates over sequence of inner components with fade transitions.",
   "main": "dist/react-fadethrough.min.js",
   "module": "dist/react-fadethrough.js",
