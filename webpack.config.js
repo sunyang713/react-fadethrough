@@ -7,8 +7,8 @@ module.exports = {
   context: resolve('src'),
 
   entry: {
-    'react-fadethrough': 'main',
-    'react-fadethrough.min': 'main'
+    'react-fadethrough': 'Fadethrough',
+    'react-fadethrough.min': 'Fadethrough'
   },
 
   output: {
