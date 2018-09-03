@@ -126,7 +126,7 @@ var Fadethrough = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Fadethrough.__proto__ || Object.getPrototypeOf(Fadethrough)).call(this, props));
 
     var activeIndex = 0;
-    var interval = _this.props.interval || 2000;
+    var interval = _this.props.interval || 3000;
 
     _this.state = {
       activeIndex: activeIndex,
@@ -150,10 +150,8 @@ var Fadethrough = function (_Component) {
   }, {
     key: 'next',
     value: function next() {
-      var i = this.state.activeIndex + 1;
-      if (i === this.props.children.length) this.setState(function (prevState) {
-        return { activeIndex: 0 };
-      });else this.setState(function (prevState) {
+      var i = (this.state.activeIndex + 1) % this.props.children.length;
+      this.setState(function (prevState) {
         return { activeIndex: i };
       });
     }

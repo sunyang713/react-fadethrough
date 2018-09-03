@@ -28,11 +28,8 @@ export default class Fadethrough extends Component {
   }
 
   next() {
-    let i = this.state.activeIndex + 1
-    if (i === this.props.children.length)
-      this.setState(prevState => ({ activeIndex: 0 }))
-    else
-      this.setState(prevState => ({ activeIndex: i }))
+    const i = (this.state.activeIndex + 1) % this.props.children.length
+    this.setState(prevState => ({ activeIndex: i }))
   }
 
   render() {
